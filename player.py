@@ -26,7 +26,7 @@ def index():
 @app.route('/play')
 def play_audio():
     audio_file = 'test.mp3'  # Replace with the name of your audio file
-    return send_from_directory(AUDIO_DIRECTORY, audio_file)
+    return send_from_directory(AUDIO_DIRECTORY, audio_file, as_attachment=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
